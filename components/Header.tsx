@@ -5,7 +5,7 @@ import Router from "next/router";
 
 const Header: FC = () => {
   return (
-    <header className="sticky top-0 py-2 px-4 md:p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
+    <header className="sticky top-0 py-2 px-3 md:p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
       <motion.div
         className="flex flex-row items-center"
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
@@ -31,7 +31,7 @@ const Header: FC = () => {
           bgColor="transparent"
         />
         <SocialIcon
-          url="https://wa.me/0542822219?text=%D7%9E%D7%94%20%D7%A7%D7%95%D7%A8%D7%94?"
+          url="https://wa.link/tdo38m"
           target="_blank"
           fgColor="gray"
           bgColor="transparent"
