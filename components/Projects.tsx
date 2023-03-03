@@ -50,7 +50,7 @@ const Projects: FC = () => {
               key={index}
             >
               <motion.img
-                initial={{ y: -300, opacity: 0 }}
+                initial={{ y: -50, opacity: 0 }}
                 transition={{ duration: 1.2 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}

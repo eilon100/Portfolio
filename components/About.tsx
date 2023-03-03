@@ -4,7 +4,7 @@ import img from "../public/profileImage.jpeg";
 const About: FC = () => {
   return (
     <motion.div
-      className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
+      className="flex flex-col relative h-screen mt-24 text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
