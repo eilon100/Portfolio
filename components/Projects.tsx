@@ -59,7 +59,7 @@ const Projects: FC = () => {
                 className=" max-h-[400px] rounded-lg"
               />
 
-              <div className="space-y-10 px-0 md:px-10 max-w-6xl">
+              <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-6xl">
                 <div className="flex flex-col justify-center gap-2 md:gap-5">
                   <h4 className="text-3xl md:text-5xl font-semibold text-center">
                     {title}

@@ -31,7 +31,7 @@ const Header: FC = () => {
           bgColor="transparent"
         />
         <SocialIcon
-          url="https://wa.me/0542822219"
+          url="https://wa.me/0542822219?text=%D7%9E%D7%94%20%D7%A7%D7%95%D7%A8%D7%94?"
           target="_blank"
           fgColor="gray"
           bgColor="transparent"
