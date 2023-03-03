@@ -5,7 +5,7 @@ import Router from "next/router";
 
 const Header: FC = () => {
   return (
-    <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
+    <header className="sticky top-0 py-2 px-4 md:p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
       <motion.div
         className="flex flex-row items-center"
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
