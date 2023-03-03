@@ -85,6 +85,7 @@ const Projects: FC = () => {
                     target="_blank"
                     className=" bg-main py-2.5 rounded-lg px-6 "
                     href={siteLink}
+                    rel="noreferrer"
                   >
                     Take me there
                   </a>
