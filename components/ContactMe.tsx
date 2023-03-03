@@ -1,7 +1,7 @@
 import { FC, useRef, useState } from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import emailjs from "@emailjs/browser";
-import cogoToast from "cogo-toast";
+
 const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID!;
 const ContactMe: FC = () => {
   const form: any = useRef();
@@ -22,13 +22,12 @@ const ContactMe: FC = () => {
       )
       .then(
         (result) => {
-          cogoToast.success("Email has been sent");
           setDisableButton(false);
           e.target.reset();
         },
         (error) => {
           console.log(error.text);
-          cogoToast.error("Failed to send email");
+
           setDisableButton(false);
         }
       );
