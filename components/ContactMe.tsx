@@ -32,8 +32,8 @@ const ContactMe: FC = () => {
   };
 
   return (
-    <div className="h-screen w-full relative flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
-      <h3 className="absolute top-24 uppercase tracking-[20px] ml-[20px] text-gray-500 text-2xl">
+    <div className="h-screen w-full relative gap-10 md:justify-evenly md:gap-0 pt-[20vh] md:pt-0 flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 mx-auto items-center">
+      <h3 className="absolute top-[12%] uppercase tracking-[20px] ml-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
       <div className="flex flex-col space-y-5 md:space-y-10 w-full">

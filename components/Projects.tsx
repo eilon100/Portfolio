@@ -33,12 +33,12 @@ const Projects: FC = () => {
   ];
   return (
     <motion.div
-      className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+      className="h-screen relative flex gap-10 md:justify-evenly md:gap-0 pt-[20vh] md:pt-0 overflow-hidden flex-col text-left md:flex-row max-w-full mx-auto items-center z-0"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] ml-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-[12%] uppercase tracking-[20px] ml-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
 
@@ -46,7 +46,7 @@ const Projects: FC = () => {
         {projects.map(
           ({ image, title, technologyIcons, paragraph, siteLink }, index) => (
             <div
-              className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10 md:p-40 h-screen"
+              className="w-screen md:justify-center flex-shrink-0 snap-center flex flex-col space-y-5 items-center  p-10 md:p-40 h-screen"
               key={index}
             >
               <motion.img
@@ -56,7 +56,7 @@ const Projects: FC = () => {
                 viewport={{ once: true }}
                 src={image}
                 alt="Image"
-                className=" max-h-[500px] rounded-lg"
+                className=" max-h-[400px] rounded-lg"
               />
 
               <div className="space-y-10 px-0 md:px-10 max-w-6xl">
