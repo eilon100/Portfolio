@@ -24,11 +24,7 @@ const ExperienceCard: FC = () => {
             Designed and developed multiple web applications from scratch using
             various front-end and back-end technologies.
           </li>
-          <li>
-            Collaborated with cross-functional teams to ensure seamless
-            integration of front-end and back-end components of web
-            applications.
-          </li>
+
           <li>
             Implemented responsive design principles to ensure optimal user
             experience across multiple devices and screen sizes.
