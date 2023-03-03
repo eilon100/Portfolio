@@ -37,7 +37,7 @@ const ContactMe: FC = () => {
         Contact
       </h3>
       <div className="flex flex-col space-y-5 md:space-y-10 w-full">
-        <h4 className="text-2xl md:text-4xl font-semibold text-center">
+        <h4 className="hidden sm:inline text-2xl md:text-4xl font-semibold text-center">
           I have got just what you need.{" "}
           <span className="decoration-main/50 underline">Lets Talk</span>
         </h4>
