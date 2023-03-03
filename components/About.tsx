@@ -33,7 +33,7 @@ const About: FC = () => {
           background:
         </h4>
         <p className="text-base">
-          Hello there, Im Eilon. Im a skilled software developer with a
+          Hello there, I'm Eilon. I'm a skilled software developer with a
           passion for creating innovative and user-friendly solutions.
         </p>
       </motion.div>

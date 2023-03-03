@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FC } from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
-
+import profileImage from "../public/profileImage.jpeg";
 const Hero: FC = () => {
   const [text, count] = useTypewriter({
     words: ["Hello, My name is Eilon", "I'm a Full Stack Developer"],
@@ -16,10 +16,11 @@ const Hero: FC = () => {
       <BackgroundCircles />
       <Image
         className="relative rounded-full w-36 h-36 mx-auto object-cover"
-        src="/../public/profileImage.jpeg"
+        src={profileImage}
         width={128}
         height={128}
         alt="Avatar"
+        unoptimized
       />
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">

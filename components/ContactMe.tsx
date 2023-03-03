@@ -6,8 +6,6 @@ const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID!;
 const ContactMe: FC = () => {
   const form: any = useRef();
   const [disableButton, setDisableButton] = useState(false);
-  console.log(SERVICE_ID);
-
   const handleSubmit = (
     e: React.FormEvent<HTMLFormElement> & { target: HTMLFormElement }
   ) => {
