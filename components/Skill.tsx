@@ -11,7 +11,7 @@ const Skill: FC<IProps> = ({ directionLeft, name }) => {
     <div className="group relative flex cursor-pointer ">
       <motion.img
         className="rounded-full border border-gray-500 object-cover w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out"
-        initial={{ x: directionLeft ? -200 : 200, opacity: 0 }}
+        initial={{ x: directionLeft ? -50 : 50, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
