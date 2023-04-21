@@ -44,11 +44,7 @@ const Header: FC = () => {
         animate={{ x: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 1.5 }}
       >
-        <a
-          className="flex items-center gap-2"
-          href="Eilon shamir resume.pdf"
-          download
-        >
+        <a className="flex items-center gap-2" href="/Resume.pdf" download>
           <TbFileDownload className="text-2xl text-gray-500" />
           <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
             Download CV
