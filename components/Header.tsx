@@ -1,8 +1,8 @@
-import { FC } from "react";
-import { SocialIcon } from "react-social-icons";
-import { motion } from "framer-motion";
-import Router from "next/router";
-import { TbFileDownload } from "react-icons/tb";
+import { FC } from 'react';
+import { SocialIcon } from 'react-social-icons';
+import { motion } from 'framer-motion';
+import Router from 'next/router';
+import { TbFileDownload } from 'react-icons/tb';
 const Header: FC = () => {
   return (
     <header className="sticky top-0 py-2 px-3 md:p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
@@ -46,7 +46,7 @@ const Header: FC = () => {
       >
         <a
           className="flex items-center gap-2"
-          href="Eilon shamir CV.pdf"
+          href="Eilon shamir resume.pdf"
           download
         >
           <TbFileDownload className="text-2xl text-gray-500" />
@@ -56,7 +56,7 @@ const Header: FC = () => {
         </a>
         <div
           onClick={() => {
-            Router.push("#contact");
+            Router.push('#contact');
           }}
         >
           <SocialIcon
