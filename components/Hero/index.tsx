@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import HeroParticles from './Particles/HeroParticles';
 import MainHero from './MainHero';
 import HeroScroller from './HeroScroller';

@@ -2,6 +2,7 @@ import Router from 'next/router';
 import React from 'react';
 import { TbFileDownload } from 'react-icons/tb';
 import { links } from '../../../../utils/data';
+
 const {
   Contact: { sectionId },
 } = links;

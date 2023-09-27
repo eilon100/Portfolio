@@ -4,51 +4,12 @@ import {
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { FaUserGraduate, FaBriefcaseMedical, FaReact } from 'react-icons/fa';
-import { MdOutlineComputer } from 'react-icons/md';
-
-const experiencesData = [
-  {
-    title: 'Full matriculation certificates',
-    location: 'Begin High School',
-    description:
-      'I graduated after 6 months of studying. I immediately found a job as a front-end developer.',
-    icon: <FaUserGraduate />,
-    date: 'Sep 2016 - Jul 2019',
-    points: ['1', '2', '3'],
-  },
-  {
-    title: 'Israel Defense Forces',
-    location: '',
-    description: 'As a combat medic in Handasa Kravit',
-    icon: <FaBriefcaseMedical />,
-    date: 'Nov 2019 - Aug 2022',
-    points: ['1', '2', '3'],
-  },
-  {
-    title: 'Full Stack Developer | Freelance',
-    location: 'Remote',
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: <MdOutlineComputer />,
-    date: 'Apr 2021 - Present',
-    points: ['1', '2', '3'],
-  },
-  {
-    title: 'Full-Stack Developer Front-end Focused',
-    location: 'Kal-Quote · Part-time',
-    description:
-      'A startup company that specializes in providing a solution to the problem of communication and management between suppliers and customers. As a sole front developer, I created the frontend myself while thinking and self learning about the best options',
-    icon: <FaReact />,
-    date: 'Jan 2022 - Present',
-    points: ['1', '2', '3'],
-  },
-];
+import { EXPERIENCE } from '../../../utils/constants';
 
 export default function Experience() {
   return (
     <VerticalTimeline lineColor="gray">
-      {experiencesData.map((item, index) => (
+      {EXPERIENCE.map((item, index) => (
         <React.Fragment key={index}>
           <VerticalTimelineElement
             contentStyle={{
@@ -69,10 +30,15 @@ export default function Experience() {
             }}
           >
             <h3 className="font-semibold capitalize">{item.title}</h3>
-            <p className="!font-normal !mt-0">{item.location}</p>
-            <p className="!mt-1 !font-normal text-white/75">
-              {item.description}
-            </p>
+            <p className="!font-normal !mt-0 text-white/75">{item.location}</p>
+            <p className="!mt-1 !font-normal !mb-2">{item.description}</p>
+            <ul className="list-inside">
+              {item.list?.map((row, index) => (
+                <li className="list-disc" key={index}>
+                  {row}
+                </li>
+              ))}
+            </ul>
           </VerticalTimelineElement>
         </React.Fragment>
       ))}

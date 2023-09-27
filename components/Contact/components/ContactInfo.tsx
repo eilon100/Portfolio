@@ -1,20 +1,6 @@
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import React from 'react';
-
-const CONTACT_INFO = [
-  {
-    icon: <PhoneIcon />,
-    text: '054-282-2219',
-  },
-  {
-    icon: <EnvelopeIcon />,
-    text: 'eilonshamir123@gmail.com',
-  },
-  {
-    icon: <MapPinIcon />,
-    text: 'Rosh HaAyin, Israel',
-  },
-];
+import { CONTACT_INFO } from '../../../utils/constants';
 
 function ContactInfo() {
   return (

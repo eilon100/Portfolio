@@ -1,29 +1,32 @@
 import React from 'react';
 import { SocialIcon } from 'react-social-icons';
+import { SOCIAL_LINKS } from '../../../../utils/constants';
+
+const { gitHub, linkedin, instagram, whatsapp } = SOCIAL_LINKS;
 
 function SocialLinks() {
   return (
     <>
       <SocialIcon
-        url="https://github.com/eilon100"
+        url={gitHub}
         target="_blank"
         fgColor="gray"
         bgColor="transparent"
       />
       <SocialIcon
-        url="https://www.linkedin.com/in/eilon-shamir/"
+        url={linkedin}
         target="_blank"
         fgColor="gray"
         bgColor="transparent"
       />
       <SocialIcon
-        url="https://www.instagram.com/eilon_shamir/"
+        url={instagram}
         target="_blank"
         fgColor="gray"
         bgColor="transparent"
       />
       <SocialIcon
-        url="https://wa.link/tdo38m"
+        url={whatsapp}
         target="_blank"
         fgColor="gray"
         bgColor="transparent"
