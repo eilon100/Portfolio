@@ -9,7 +9,7 @@ import {
 } from '@react-three/drei';
 import CanvasLoader from '../../CanvasLoader';
 
-const Ball = ({ imgUrl }: { imgUrl: string }) => {
+const Ball = ({ imgUrl }) => {
   const [decal] = useTexture([imgUrl]);
 
   return (
@@ -36,7 +36,7 @@ const Ball = ({ imgUrl }: { imgUrl: string }) => {
   );
 };
 
-const BallCanvas = ({ icon }: { icon: string }) => {
+const BallCanvas = ({ icon }) => {
   return (
     <Canvas
       frameloop="demand"
