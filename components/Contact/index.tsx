@@ -18,11 +18,10 @@ function ContactMe() {
     <section
       ref={ref}
       id={sectionId}
-      className="w-full relative gap-10 mb-32 flex flex-col text-center px-10  items-center"
+      className="w-full relative  mb-32 flex flex-col text-center px-10  items-center"
     >
       <SectionHeader>Contact</SectionHeader>
-
-      <div className="grid md:grid-cols-2 py-12 gap-4 relative w-full max-w-7xl">
+      <div className="grid md:grid-cols-2 md:py-12 gap-4 relative w-full max-w-7xl">
         <ContactInfo />
         <ContactForm />
       </div>
