@@ -23,7 +23,6 @@ export const skillsInfo = [
   { name: 'materialui', icon: '/tech/materialui.png' },
 ];
 
-const d = ['express', 'materialui', 'github'];
 const {
   Skills: { nameToDisplay, sectionId },
 } = links;
