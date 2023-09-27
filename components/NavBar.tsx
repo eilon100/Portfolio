@@ -11,8 +11,8 @@ function NavBar() {
 
   return (
     <header className="z-[999] relative">
-      <nav className="p-1 mx-1 rounded-3xl backdrop-blur-[0.4rem] flex justify-center items-center fixed w-full max-w-[60rem] left-1/2 -translate-x-1/2 top-[1.7rem]">
-        <ul className="flex items-center w-full justify-between gap-y-1 xs:gap-y-2 text-[0.65rem] xs:text-[0.8rem] sm:text-[1rem] font-medium text-secondary ">
+      <nav className="  flex justify-center items-center fixed w-full max-w-[60rem] left-1/2 -translate-x-1/2 top-[1.7rem]">
+        <ul className="mx-2 p-1 flex rounded-3xl backdrop-blur-[0.4rem] items-center w-full justify-between gap-y-1 xs:gap-y-2 text-[0.65rem] xs:text-[0.8rem] sm:text-[1rem] font-medium text-secondary ">
           {Object.values(links).map(({ nameToDisplay, sectionId }) => (
             <motion.li
               className="h-3/4 flex items-center justify-center relative"
