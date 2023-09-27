@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import { motion } from "framer-motion";
-import { FC } from "react";
-import image from "../public/Qal-quote.svg";
-const ExperienceCard: FC = () => {
+import { motion } from 'framer-motion';
+import image from '/public/Qal-quote.svg';
+
+function ExperienceCard() {
   return (
     <article className="flex flex-col justify-center items-center p-6 py-10  md:py-20 md:mt-0  w-full  lg:max-w-[900px]  flex-shrink-0 rounded-sm md:bg-[#292929] overflow-hidden">
       <motion.img
@@ -33,6 +33,6 @@ const ExperienceCard: FC = () => {
       </div>
     </article>
   );
-};
+}
 
 export default ExperienceCard;

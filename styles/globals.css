@@ -2,12 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-	.heroButton {
-		@apply px-4 sm:px-6 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-[#f7ab0a]/40 hover:text-[#f7ab0a]/40;
-	}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
-	.contactInput {
-		@apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 transition-all focus:border-[#f7ab0a]/40 focus:text-[#f7ab0a]/40 hover:border-[#f7ab0a]/40;
-	}
+body {
+  background: url('https://uploads-ssl.webflow.com/62e3ee10882dc50bcae8d07a/631a5d4631d4c55a475f3e34_noise-50.png');
+  background-color: rgb(36, 36, 36);
+  position: relative;
+  overflow-x: hidden;
+}
+
+@layer components {
+  .heroButton {
+    @apply px-4 sm:px-6 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-secondary transition-all hover:border-[#f7ab0a]/40 hover:text-[#f7ab0a]/40;
+  }
+
+  .contactInput {
+    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-secondary transition-all focus:border-[#f7ab0a]/40 focus:text-[#f7ab0a]/40 hover:border-[#f7ab0a]/40;
+  }
 }

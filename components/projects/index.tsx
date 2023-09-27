@@ -1,52 +1,60 @@
 /* eslint-disable @next/next/no-img-element */
-import { motion } from "framer-motion";
-import { FC } from "react";
-import WeatherImage from "../public/WeatherSite.png";
-import ReplicazLogo from "../public/ReplicazLogo.png";
-const Projects: FC = () => {
-  const projects = [
-    {
-      image: ReplicazLogo.src,
-      title: "",
-      technologyIcons: [
-        "ts",
-        "react",
-        "next",
-        "tailwind",
-        "materialui",
-        "express",
-        "mongodb",
-        "nodejs",
-      ],
-      paragraph:
-        "Developed a social network web app to help people to afford buying expensive clothing and shoes for cheap. ",
-      siteLink: "https://replicaz.vercel.app/",
-    },
-    {
-      image: WeatherImage.src,
-      title: "Weather Site",
-      technologyIcons: ["js", "scss", "react", "css", "html"],
-      paragraph:
-        "In my free time, I developed a weather website that provides users with up-to-date weather information for any location.",
-      siteLink: "https://weather-site-gray.vercel.app/",
-    },
-  ];
+import { motion } from 'framer-motion';
+import WeatherImage from '/public/WeatherSite.png';
+import ReplicazLogo from '/public/ReplicazLogo.png';
+import { links } from '../../utils/data';
+import { useSectionInView } from '../../utils/hooks/useSectionInView';
+import SectionHeader from '../SectionHeader';
+
+const projects = [
+  {
+    image: ReplicazLogo.src,
+    title: '',
+    technologyIcons: [
+      'ts',
+      'react',
+      'next',
+      'tailwind',
+      'materialui',
+      'express',
+      'mongodb',
+      'nodejs',
+    ],
+    paragraph:
+      'Developed a social network web app to help people to afford buying expensive clothing and shoes for cheap. ',
+    siteLink: 'https://replicaz.vercel.app/',
+  },
+  {
+    image: WeatherImage.src,
+    title: 'Weather Site',
+    technologyIcons: ['js', 'scss', 'react', 'css', 'html'],
+    paragraph:
+      'In my free time, I developed a weather website that provides users with up-to-date weather information for any location.',
+    siteLink: 'https://weather-site-gray.vercel.app/',
+  },
+];
+const {
+  Projects: { nameToDisplay, sectionId },
+} = links;
+
+function Projects() {
+  const { ref } = useSectionInView(nameToDisplay);
+
   return (
-    <motion.div
-      className="h-screen relative flex gap-10 md:justify-evenly md:gap-0 pt-[20vh] md:pt-0 overflow-hidden flex-col text-left md:flex-row max-w-full mx-auto items-center z-0"
+    <motion.section
+      ref={ref}
+      id={sectionId}
+      className="relative flex flex-col items-center"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
     >
-      <h3 className="absolute top-[12%] uppercase tracking-[20px] ml-[20px] text-gray-500 text-2xl">
-        Projects
-      </h3>
-
+      <SectionHeader>Projects</SectionHeader>
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-main/80">
         {projects.map(
           ({ image, title, technologyIcons, paragraph, siteLink }, index) => (
             <div
-              className="w-screen md:justify-center flex-shrink-0 snap-center flex flex-col space-y-5 items-center  p-10 md:p-40 h-screen"
+              className="w-screen justify-evenly snap-start flex-shrink-0 flex flex-col items-center"
               key={index}
             >
               <motion.img
@@ -97,8 +105,8 @@ const Projects: FC = () => {
       </div>
 
       <div className="w-full absolute top-[30%] bg-main/10 left-0 h-[500px] -skew-y-12" />
-    </motion.div>
+    </motion.section>
   );
-};
+}
 
 export default Projects;

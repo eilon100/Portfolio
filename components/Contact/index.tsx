@@ -1,9 +1,17 @@
-import { FC, useRef, useState } from "react";
-import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
-import emailjs from "@emailjs/browser";
+import { useRef, useState } from 'react';
+import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
+import emailjs from '@emailjs/browser';
+import { links } from '../../utils/data';
+import { useSectionInView } from '../../utils/hooks/useSectionInView';
+import SectionHeader from '../SectionHeader';
 
 const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID!;
-const ContactMe: FC = () => {
+const {
+  Contact: { nameToDisplay, sectionId },
+} = links;
+
+function ContactMe() {
+  const { ref } = useSectionInView(nameToDisplay);
   const form: any = useRef();
   const [disableButton, setDisableButton] = useState(false);
   const handleSubmit = (
@@ -14,9 +22,9 @@ const ContactMe: FC = () => {
     emailjs
       .sendForm(
         SERVICE_ID,
-        "template_b777vi7",
+        'template_b777vi7',
         form.current,
-        "dRii3LyW1kBLp__Ny"
+        'dRii3LyW1kBLp__Ny'
       )
       .then(
         (result) => {
@@ -32,13 +40,15 @@ const ContactMe: FC = () => {
   };
 
   return (
-    <div className="h-screen w-full relative gap-10 md:justify-evenly md:gap-0 pt-[20vh] md:pt-0 flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 mx-auto items-center">
-      <h3 className="absolute top-[12%] uppercase tracking-[20px] ml-[20px] text-gray-500 text-2xl">
-        Contact
-      </h3>
+    <section
+      ref={ref}
+      id={sectionId}
+      className=" w-full relative gap-10 mb-32 flex flex-col text-center px-10  items-center"
+    >
+      <SectionHeader> Contact</SectionHeader>
       <div className="flex flex-col space-y-5 md:space-y-10 w-full">
         <h4 className="hidden sm:inline text-2xl md:text-4xl font-semibold text-center">
-          I have got just what you need.{" "}
+          I have got just what you need.{' '}
           <span className="decoration-main/50 underline">Lets Talk</span>
         </h4>
         <div className=" space-y-5 md:space-y-10">
@@ -98,8 +108,8 @@ const ContactMe: FC = () => {
           </button>
         </form>
       </div>
-    </div>
+    </section>
   );
-};
+}
 
 export default ContactMe;
