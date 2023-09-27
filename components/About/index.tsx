@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 import { links } from '../../utils/data';
 import { useSectionInView } from '../../utils/hooks/useSectionInView';
 import SectionHeader from '../SectionHeader';
@@ -25,6 +26,8 @@ const {
 
 function About() {
   const { ref } = useSectionInView(nameToDisplay);
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true });
 
   return (
     <motion.section
@@ -58,9 +61,25 @@ function About() {
               passion for creating innovative and user-friendly solutions.
             </p>
           </div>
-          <div className="flex flex-col md:flex-row gap-5 w-full justify-center items-center">
-            {services.map((service, index) => (
-              <ServiceCard key={service.title} index={index} {...service} />
+          <div
+            ref={sectionRef}
+            className="flex flex-col md:flex-row gap-5 w-full justify-center items-center"
+          >
+            {services.map(({ title, icon }, index) => (
+              <motion.div
+                key={title}
+                initial={{ x: -100, opacity: 0 }}
+                transition={{
+                  delay: 0.4 * index,
+                  duration: 0.75,
+                  ease: 'easeOut',
+                }}
+                animate={isInView && { x: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                className=" w-full md:w-1/3 bg-gradient-to-r from-gray-100 to-gray-400 p-[1px] rounded-[20px] shadow-xl"
+              >
+                <ServiceCard title={title} icon={icon} />
+              </motion.div>
             ))}
           </div>
         </div>

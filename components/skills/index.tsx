@@ -1,8 +1,14 @@
 import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { links } from '../../utils/data';
 import { useSectionInView } from '../../utils/hooks/useSectionInView';
 import SectionHeader from '../SectionHeader';
-import BallCanvas from './components/Ball';
+import Skill from './components/Skill';
+
+const BallCanvas = dynamic(() => import('./components/Ball'), {
+  ssr: false,
+});
 
 export const skillsInfo = [
   { name: 'js', icon: '/tech/javascript.png' },
@@ -37,14 +43,12 @@ function Skills() {
       className="flex relative flex-col text-center justify-center  items-center"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 2 }}
     >
       <SectionHeader> Skills</SectionHeader>
       <div className="flex flex-row flex-wrap justify-center gap-10 max-w-7xl">
         {skillsInfo.map(({ name, icon }) => (
-          <div className="w-28 h-28" key={name}>
-            <BallCanvas icon={icon} />
-          </div>
+          <Skill name={name} icon={icon} key={name} />
         ))}
       </div>
     </motion.section>

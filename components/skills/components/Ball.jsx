@@ -42,13 +42,12 @@ const BallCanvas = ({ icon }) => {
       frameloop="demand"
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
+      dispose={null}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} />
+        <Ball imgUrl={icon} /> <Preload all />
       </Suspense>
-
-      <Preload all />
     </Canvas>
   );
 };
