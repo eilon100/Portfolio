@@ -21,7 +21,7 @@ function Project({
 }: Project) {
   const isInDev = status === 'development';
   return (
-    <div className="w-full p-10 justify-evenly snap-start flex-shrink-0 flex flex-col items-center">
+    <div className="w-full p-10 justify-evenly snap-start  flex flex-col items-center">
       <motion.img
         initial={{ y: -50, opacity: 0 }}
         transition={{ duration: 1.2 }}

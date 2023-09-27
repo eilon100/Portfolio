@@ -1,10 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
 import { motion } from 'framer-motion';
 import { links } from '../../utils/data';
 import { useSectionInView } from '../../utils/hooks/useSectionInView';
 import SectionHeader from '../SectionHeader';
 import Project from './components/Project';
 import { PROJECTS } from '../../utils/constants';
+import ScrollIndicator from './components/ScrollIndicator';
+import { useInView } from 'react-intersection-observer';
 
 const {
   Projects: { nameToDisplay, sectionId },
@@ -12,6 +13,7 @@ const {
 
 function Projects() {
   const { ref } = useSectionInView(nameToDisplay);
+  const { ref: elementRef, inView } = useInView({ threshold: 0.5 });
 
   return (
     <motion.section
@@ -23,9 +25,16 @@ function Projects() {
       transition={{ duration: 1.5 }}
     >
       <SectionHeader>Projects</SectionHeader>
+      {!inView && <ScrollIndicator />}
       <div className="max-w-7xl w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-proximity z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-main/80">
         {PROJECTS.map((project, index) => (
-          <Project {...project} key={index} />
+          <div
+            className="flex-shrink-0 w-full"
+            key={index}
+            ref={index === PROJECTS.length - 1 ? elementRef : null}
+          >
+            <Project {...project} />
+          </div>
         ))}
       </div>
 
