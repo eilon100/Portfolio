@@ -12,7 +12,7 @@ function MainHero() {
   });
 
   return (
-    <div className="z-20 w-full">
+    <div className="z-20">
       <Image
         className=" rounded-full w-40 h-40 mx-auto object-cover mb-3"
         src="/profileImage.jpeg"
