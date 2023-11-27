@@ -24,7 +24,7 @@ function Skills() {
       transition={{ duration: 2 }}
     >
       <SectionHeader> Skills</SectionHeader>
-      <div className="flex flex-row flex-wrap justify-center gap-10 max-w-7xl mx-3">
+      <div className="flex flex-row flex-wrap justify-center gap-10 max-w-7xl mx-3 py-10">
         {SKILLS.map(({ name, icon }, index) => (
           <motion.div
             key={name}
