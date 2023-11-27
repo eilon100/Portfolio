@@ -12,13 +12,13 @@ function WorkExperience() {
   const { ref } = useSectionInView(nameToDisplay);
   return (
     <motion.section
-      ref={ref}
-      id={sectionId}
+     
       className="flex relative flex-col px-5 items-center"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-    >
+    >  
+      <div ref={ref} id={sectionId}/>
       <SectionHeader>Experience</SectionHeader>
       <Experience />
     </motion.section>
