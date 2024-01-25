@@ -5,7 +5,7 @@ import { links } from '../../utils/data';
 import { useSectionInView } from '../../utils/hooks/useSectionInView';
 import SectionHeader from '../SectionHeader';
 import ServiceCard from './components/ServiceCard';
-import img from '/public/profileImage.jpeg';
+import img from '/public/aboutImage.jpeg';
 
 const {
   About: { nameToDisplay, sectionId },
