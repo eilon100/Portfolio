@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
   {
     image: '/projects/toval-recycle.png',
     title: 'Toval Recycle',
-    status: 'updating',
+    status: 'live',
     technologyIcons: ['js', 'react', 'tailwind', 'html', 'vite'],
     paragraph:
       'I developed an impactful landing page for a recycling company, I prioritized UI / UX to ensure an engaging user experience while optimizing site performance.',
@@ -76,7 +76,7 @@ export const PROJECTS: Project[] = [
   {
     image: '/projects/tic-tac-toe.png',
     title: 'Tic Tac Toe online',
-    status: 'development',
+    status: 'live',
     technologyIcons: [
       'js',
       'react',
@@ -87,8 +87,8 @@ export const PROJECTS: Project[] = [
       'nodejs',
     ],
     paragraph:
-      'Teaming up with a friend, we ventured into the world of online gaming by creating a dynamic Tic Tac Toe experience. Our collaborative project boasts account management, leaderboards, and multiplayer capabilities, enhancing the traditional game with a competitive twist and providing a platform for gamers to connect and compete',
-    siteLink: 'https://toval-recycle-site.vercel.app/',
+      'Classic game of tic-tac-toe, we ventured into the world of online gaming by creating a dynamic Tic Tac Toe experience. Our collaborative project boasts account management, leaderboards, and multiplayer capabilities, enhancing the traditional game with a competitive twist and providing a platform for gamers to connect and compete',
+    siteLink: 'https://tic-tac-toe-online-game.vercel.app/',
   },
 ];
 
