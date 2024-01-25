@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
   {
     image: '/projects/toval-recycle.png',
     title: 'Toval Recycle',
-    status: 'live',
+    status: 'updating',
     technologyIcons: ['js', 'react', 'tailwind', 'html', 'vite'],
     paragraph:
       'I developed an impactful landing page for a recycling company, I prioritized UI / UX to ensure an engaging user experience while optimizing site performance.',
