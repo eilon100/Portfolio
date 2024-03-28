@@ -16,9 +16,10 @@ function WorkExperience() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-    >  
+      ref={ref}
+      id={sectionId}
+    >
       <SectionHeader>Experience</SectionHeader>
-      <div ref={ref} id={sectionId}/>
       <Experience />
     </motion.section>
   );
