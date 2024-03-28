@@ -116,7 +116,12 @@ export const EXPERIENCE = [
     title: 'Full matriculation certificates',
     location: 'Begin High School',
     description: 'I graduated after 12 years of studying.',
-    list: ['5 units Math', '5 units English', '5 units Business Management'],
+    list: [
+      '5 units Math',
+      '5 units English',
+      '5 units Business Management',
+      '5 units computer science',
+    ],
     icon: <FaUserGraduate />,
     date: 'Sep 2016 - Jul 2019',
     points: ['1', '2', '3'],
@@ -139,9 +144,9 @@ export const EXPERIENCE = [
     title: 'Full Stack Developer | Freelance',
     location: 'Remote',
     description:
-      "I'm now a full-stack developer working also as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, NodeJs, Express and MongoDB. I'm open to full-time opportunities.",
+      "I'm a full-stack developer working also as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, NodeJs, Express and MongoDB. I'm open to full-time opportunities.",
     icon: <MdOutlineComputer />,
-    date: 'Apr 2021 - Present',
+    date: 'Jul 2021 - Jan 2022',
     points: ['1', '2', '3'],
   },
   {
@@ -150,12 +155,25 @@ export const EXPERIENCE = [
     description:
       'A startup company that specializes in providing a solution to the problem of communication and management between suppliers and customers.',
     list: [
-      'Head of a team of three people',
+      'Head of a team of 3 people',
       'Responsible for the final result of the tasks',
       'Invests constant thought into clear readable code',
     ],
     icon: <FaReact />,
-    date: 'Jan 2022 - Present',
+    date: 'Jan 2022 - Nov 2023',
+    points: ['1', '2', '3'],
+  },
+  {
+    title: 'Front-end Developer',
+    location: 'Abra Web & Mobile · Full Time',
+    description: '',
+    list: [
+      'Leader developer under Team lead',
+      'Responsible for development strategies and architecture with overall project goals and priorities',
+      'enhanced both organizational efficiency and project code quality by 20%',
+    ],
+    icon: <FaReact />,
+    date: 'Nov 2023 - Present',
     points: ['1', '2', '3'],
   },
 ];
