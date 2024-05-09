@@ -25,7 +25,7 @@ function About() {
       <SectionHeader>About</SectionHeader>
       <div className="flex  xl:h-[40rem] flex-col gap-10 text-center xl:text-left xl:flex-row px-10 items-center">
         <motion.img
-          className="w-full max-w-sm h-full xl:max-w-fit object-cover rounded-lg"
+          className="w-full max-w-sm h-full xl:max-w-lg object-cover rounded-lg"
           src={img.src}
           initial={{ y: 50, opacity: 0 }}
           transition={{ duration: 1.2 }}
