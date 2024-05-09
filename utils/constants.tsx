@@ -151,7 +151,7 @@ export const EXPERIENCE = [
   },
   {
     title: 'Full-Stack Developer Front-end Focused',
-    location: 'Kal-Quote · Part-time',
+    location: 'Kal-Quote · Full Time',
     description:
       'A startup company that specializes in providing a solution to the problem of communication and management between suppliers and customers.',
     list: [
