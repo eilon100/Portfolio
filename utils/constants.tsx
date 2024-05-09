@@ -146,7 +146,7 @@ export const EXPERIENCE = [
     description:
       "I'm a full-stack developer working also as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, NodeJs, Express and MongoDB. I'm open to full-time opportunities.",
     icon: <MdOutlineComputer />,
-    date: 'Jul 2021 - Jan 2022',
+    date: 'May 2021 - Jan 2022',
     points: ['1', '2', '3'],
   },
   {
